@@ -1,6 +1,7 @@
 <div class="left-extra"></div>
 
-<app-drawer-container [open]="open" [position]="position" [type]="type">
+<app-drawer-container [open]="open" [position]="position" [type]="type" [displayContentOverlay]="useOverlay"
+  (overlayClicked)="open = false">
   <app-drawer>
     <div class="my-drawer">The Custom Drawer Info!</div>
   </app-drawer>

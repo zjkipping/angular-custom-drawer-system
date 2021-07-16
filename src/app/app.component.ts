@@ -1,9 +1,4 @@
-import {
-  Component,
-  ElementRef,
-  ViewChild,
-  ChangeDetectorRef
-} from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -12,10 +7,8 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  @ViewChild('shelf') shelf?: ElementRef;
-
-  shelfChildWidth = 0;
   open = false;
+  useOverlay = true;
 
   positionInput = new FormControl('left');
   typeInput = new FormControl('shift');
@@ -27,14 +20,5 @@ export class AppComponent {
   }
   get type() {
     return this.typeInput.value;
-  }
-
-  constructor(private cdr: ChangeDetectorRef) {}
-
-  ngAfterViewInit() {
-    if (this.shelf) {
-      this.shelfChildWidth = this.shelf.nativeElement.children[0].clientWidth;
-      this.cdr.detectChanges();
-    }
   }
 }

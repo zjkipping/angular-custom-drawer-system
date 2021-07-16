@@ -5,5 +5,6 @@
   </div>
   <div class="drawer-content" [@contentSlide]="{ value: animationState, params: contentSlideParams }">
     <ng-content select="app-drawer-content"></ng-content>
+    <div class="drawer-content-overlay" *ngIf="displayContentOverlay && open" (click)="overlayClicked.emit()"></div>
   </div>
 </div>

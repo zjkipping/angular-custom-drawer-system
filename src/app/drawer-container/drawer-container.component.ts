@@ -10,7 +10,9 @@ import {
   ChangeDetectorRef,
   Component,
   ElementRef,
+  EventEmitter,
   Input,
+  Output,
   ViewChild
 } from '@angular/core';
 
@@ -51,7 +53,10 @@ export class DrawerContainerComponent implements AfterViewInit {
 
   @Input() type: 'float' | 'shift' = 'float';
   @Input() position: 'left' | 'right' = 'left';
+  @Input() displayContentOverlay = false;
   @Input() open = false;
+
+  @Output() overlayClicked = new EventEmitter();
 
   drawerWidth = 0;
 
