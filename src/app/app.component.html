@@ -1,0 +1,34 @@
+<div class="left-extra"></div>
+
+<app-drawer-container [open]="open" [position]="position" [type]="type">
+  <app-drawer>
+    <div class="my-drawer">The Custom Drawer Info!</div>
+  </app-drawer>
+  <app-drawer-content>
+    <div class="my-content">
+      <button class="drawer-toggle-button" (click)="open = !open">
+        {{open ? 'Close' : 'Open'}}
+      </button>
+      <div>
+        <label>Drawer Position</label><br />
+        <select [formControl]="positionInput">
+          <option
+            *ngFor="let positionOption of positionOptions"
+            [value]="positionOption"
+            >{{positionOption}}</option
+          >
+        </select>
+      </div>
+      <div>
+        <label>Drawer Type</label><br />
+        <select [formControl]="typeInput">
+          <option *ngFor="let typeOption of typeOptions" [value]="typeOption"
+            >{{typeOption}}</option
+          >
+        </select>
+      </div>
+    </div>
+  </app-drawer-content>
+</app-drawer-container>
+
+<div class="right-extra"></div>

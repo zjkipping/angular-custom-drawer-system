@@ -1,0 +1,35 @@
+.drawer-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .drawer {
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+
+    &.left-drawer {
+      left: 0;
+    }
+
+    &.right-drawer {
+      right: 0;
+    }
+  }
+
+  .drawer-content {
+    height: 100%;
+  }
+}
+
+.drawer-container {
+  background: teal;
+}
+
+.drawer {
+  background: green;
+}
+
+.drawer-content {
+  background: grey;
+}

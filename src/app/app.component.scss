@@ -1,0 +1,43 @@
+:host {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+}
+
+.left-extra {
+  background: purple;
+  height: 100%;
+  width: 100%;
+}
+
+.right-extra {
+  background: pink;
+  height: 100%;
+  width: 100%;
+}
+
+.drawer-toggle-button {
+  height: 50px;
+  width: 100px;
+  font-size: 16px;
+  font-weight: bold;
+  background: teal;
+  border-radius: 10px;
+  border: 2px solid lightgrey;
+  cursor: pointer;
+}
+
+.my-content {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  grid-template-rows: 100px 100px 100px;
+}
+
+.my-drawer {
+  width: 100px;
+  padding: 10px;
+  background-color: blue;
+  border-radius: 10px;
+}

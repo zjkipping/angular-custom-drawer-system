@@ -1,0 +1,9 @@
+<div class="drawer-container">
+  <div #drawer [ngClass]="positionClass" class="drawer"
+    [@drawerSlide]="{ value: animationState, params: drawerSlideParams }">
+    <ng-content select="app-drawer"></ng-content>
+  </div>
+  <div class="drawer-content" [@contentSlide]="{ value: animationState, params: contentSlideParams }">
+    <ng-content select="app-drawer-content"></ng-content>
+  </div>
+</div>
